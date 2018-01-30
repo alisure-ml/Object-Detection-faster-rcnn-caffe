@@ -14,12 +14,12 @@
    /usr/local/cuda/include/cudnn.h:799:27: note: declared here
    cudnnStatus_t CUDNNWINAPI cudnnSetPooling2dDescriptor(
    ```
-      
+  
    * 原因：cuDNN的版本太高
-   
-   * 解决办法：修改caffe源码或者降低cuDNN的版本
-   
-   * 修改caffe源码: 直接下载caffe到最新版本，然后采用[解决办法](https://www.cnblogs.com/zjutzz/p/6099720.html)替换文件后，再正常编译caffe。
+  
+   * 解决办法：修改caffe源码或者降低cuDNN的版本
+  
+   * 修改caffe源码: 直接下载caffe到最新版本，然后采用[解决办法](https://www.cnblogs.com/zjutzz/p/6099720.html)替换文件后，再正常编译caffe。
    ```
    1. 用最新caffe源码的以下文件替换掉faster rcnn 的对应文件
       include/caffe/layers/cudnn_relu_layer.hpp, 
